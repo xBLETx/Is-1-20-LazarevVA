@@ -14,6 +14,7 @@ namespace Is_1_20_LazarevVA
     {
         private StringFormat SF = new StringFormat();
         private bool MouseEntered = false;
+        private bool MousePressed = false;
         public norm_Button()
         {
             // оптимизация кастомной кнопки
@@ -35,6 +36,16 @@ namespace Is_1_20_LazarevVA
             Rectangle rect = new Rectangle(0, 0, Width - 1, Height - 1);
             graph.DrawRectangle(new Pen(BackColor), rect);
             graph.FillRectangle(new SolidBrush(BackColor), rect);
+            if(MouseEntered)
+            {
+                graph.DrawRectangle(new Pen(Color.FromArgb(30,Color.White)), rect);
+                graph.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.White)), rect);
+            }
+            if (MousePressed)
+            {
+                graph.DrawRectangle(new Pen(Color.FromArgb(60, Color.White)), rect);
+                graph.FillRectangle(new SolidBrush(Color.FromArgb(60, Color.White)), rect);
+            }
             graph.DrawString(Text, Font, new SolidBrush(ForeColor), rect, SF);
 
         }
@@ -42,11 +53,26 @@ namespace Is_1_20_LazarevVA
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
-
+            MouseEntered = true;
+            Invalidate();  
         }
         protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
+            MouseEntered = false;
+            Invalidate();
+        }
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            base.OnMouseUp(e);
+            MousePressed = false;
+            Invalidate();
+        }
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            MousePressed = true;
+            Invalidate();
         }
     }
 }

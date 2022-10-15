@@ -38,6 +38,8 @@ namespace Is_1_20_LazarevVA
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.norm_Button1 = new Is_1_20_LazarevVA.norm_Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +117,22 @@ namespace Is_1_20_LazarevVA
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // norm_Button1
+            // 
+            this.norm_Button1.BackColor = System.Drawing.Color.Gray;
+            this.norm_Button1.ForeColor = System.Drawing.Color.White;
+            this.norm_Button1.Location = new System.Drawing.Point(454, 157);
+            this.norm_Button1.Name = "norm_Button1";
+            this.norm_Button1.Size = new System.Drawing.Size(132, 67);
+            this.norm_Button1.TabIndex = 8;
+            this.norm_Button1.Text = "norm_Button1";
+            // 
             // Auth1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.norm_Button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroButton3);
@@ -150,6 +163,8 @@ namespace Is_1_20_LazarevVA
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private norm_Button norm_Button1;
     }
 }
 
