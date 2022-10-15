@@ -88,7 +88,7 @@ namespace Is_1_20_LazarevVA
                 this.Show();
                 metroLabel2.Text = "неизвестный пользователь";
                 metroLabel3.Text = "Отсутствует информация о пользователе";
-                metroLabel4.Text = "Тебе сдесь не рады!";
+                metroLabel4.Text = "Тебе сдесь не рады! ";
                 metroLabel4.ForeColor = Color.Red;
                 ManagerRole(Auth.auth_role);
             }
