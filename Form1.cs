@@ -26,28 +26,28 @@ namespace Is_1_20_LazarevVA
             switch (role)
             {
                 case 1:
-                    metroLabel1.Text = "По блату";
+                    metroLabel1.Text = "Сотрудник";
                     metroLabel1.ForeColor = Color.DeepPink;
                     metroButton1.Enabled = true;
                     metroButton2.Enabled = true;
                     metroButton3.Enabled = false;
                     break;
                 case 2:
-                    metroLabel1.Text = "Царь и бог";
+                    metroLabel1.Text = "Администратор";
                     metroLabel1.ForeColor = Color.Green;
                     metroButton1.Enabled = true;
                     metroButton2.Enabled = true;
                     metroButton3.Enabled = true;
                     break;
                 case 3:
-                    metroLabel1.Text = "Из уважения";
+                    metroLabel1.Text = "Помошник";
                     metroLabel1.ForeColor = Color.Gold;
                     metroButton1.Enabled = true;
                     metroButton2.Enabled = false;
                     metroButton3.Enabled = false;
                     break;
                 default:
-                    metroLabel1.Text = "Ты кто такой";
+                    metroLabel1.Text = "Неизвестный пользователь";
                     metroLabel1.ForeColor = Color.Red;
                     metroButton1.Enabled = false;
                     metroButton2.Enabled = false;
@@ -77,7 +77,7 @@ namespace Is_1_20_LazarevVA
                 //Вытаскиваем из класса поля в label'ы
                 metroLabel2.Text = Auth.auth_id;
                 metroLabel3.Text = Auth.auth_fio;
-                metroLabel4.Text = "Ну тут мои полномочия все!";
+                metroLabel4.Text = "Лецензированый пользователь";
                 //Красим текст в label в зелёный цвет
                 metroLabel4.ForeColor = Color.Green;
                 //Вызываем метод управления ролями
@@ -86,9 +86,9 @@ namespace Is_1_20_LazarevVA
             else
             {
                 this.Show();
-                metroLabel2.Text = "Не ну ты точно левый";
-                metroLabel3.Text = "Иди отсюда!";
-                metroLabel4.Text = "Тебе сдесь не рады";
+                metroLabel2.Text = "неизвестный пользователь";
+                metroLabel3.Text = "Отсутствует информация о пользователе";
+                metroLabel4.Text = "Тебе сдесь не рады!ц";
                 metroLabel4.ForeColor = Color.Red;
                 ManagerRole(Auth.auth_role);
             }
