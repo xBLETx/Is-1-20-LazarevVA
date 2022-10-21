@@ -39,6 +39,7 @@ namespace Is_1_20_LazarevVA
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.norm_Button1 = new Is_1_20_LazarevVA.norm_Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,6 +154,7 @@ namespace Is_1_20_LazarevVA
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private norm_Button norm_Button1;
     }
 }
 

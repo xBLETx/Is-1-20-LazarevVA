@@ -113,6 +113,16 @@ namespace Is_1_20_LazarevVA
         {
 
         }
+
+        private void egoldsCard1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }
 
