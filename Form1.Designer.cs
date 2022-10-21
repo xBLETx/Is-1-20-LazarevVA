@@ -39,7 +39,9 @@ namespace Is_1_20_LazarevVA
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.norm_Button1 = new Is_1_20_LazarevVA.norm_Button();
+            this.norm_Button2 = new Is_1_20_LazarevVA.norm_Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +129,22 @@ namespace Is_1_20_LazarevVA
             this.norm_Button1.TabIndex = 8;
             this.norm_Button1.Text = "norm_Button1";
             // 
+            // norm_Button2
+            // 
+            this.norm_Button2.BackColor = System.Drawing.Color.Gray;
+            this.norm_Button2.ForeColor = System.Drawing.Color.White;
+            this.norm_Button2.Location = new System.Drawing.Point(631, 101);
+            this.norm_Button2.Name = "norm_Button2";
+            this.norm_Button2.Size = new System.Drawing.Size(100, 54);
+            this.norm_Button2.TabIndex = 9;
+            this.norm_Button2.Text = "norm_Button2";
+            // 
             // Auth1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.norm_Button2);
             this.Controls.Add(this.norm_Button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel4);
@@ -165,6 +178,8 @@ namespace Is_1_20_LazarevVA
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private norm_Button norm_Button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private norm_Button norm_Button2;
     }
 }
 
