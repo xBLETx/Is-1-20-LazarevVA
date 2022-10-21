@@ -127,7 +127,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\norm_Button.cs">
+    <Compile Include="norm_Button.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
