@@ -111,6 +111,7 @@
     <Compile Include="EgoldsCard.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FlatColors.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

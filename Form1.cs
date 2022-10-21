@@ -103,5 +103,16 @@ namespace Is_1_20_LazarevVA
         {
 
         }
+
+        private void norm_Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

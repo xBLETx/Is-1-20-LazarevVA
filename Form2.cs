@@ -40,7 +40,7 @@ namespace Is_1_20_LazarevVA
             // устанавливаем соединение с БД
             conn.Open();
             // запрос
-            string sql = $"SELECT * FROM Role WHERE Login='{login_user}'";
+            string sql = $"SELECT id_role,fio_empl,rol,Login,`Password` FROM Role,Employee WHERE Login='{login_user}'";
             // объект для выполнения SQL-запроса
             MySqlCommand command = new MySqlCommand(sql, conn);
             // объект для чтения ответа сервера

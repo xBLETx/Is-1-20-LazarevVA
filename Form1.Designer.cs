@@ -61,6 +61,7 @@ namespace Is_1_20_LazarevVA
             this.metroLabel2.Size = new System.Drawing.Size(83, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "metroLabel2";
+            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
             // metroLabel3
             // 
@@ -126,6 +127,7 @@ namespace Is_1_20_LazarevVA
             this.norm_Button1.Size = new System.Drawing.Size(132, 67);
             this.norm_Button1.TabIndex = 8;
             this.norm_Button1.Text = "norm_Button1";
+            this.norm_Button1.Click += new System.EventHandler(this.norm_Button1_Click);
             // 
             // Auth1
             // 

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EgoldsUI;
 
 namespace Is_1_20_LazarevVA
 {
@@ -14,6 +15,13 @@ namespace Is_1_20_LazarevVA
         #region Переменные
         private float CurtainHeight;//высота шторки баз
 
+
+        #endregion
+        #region свойства
+        public Color BackColorCurtain { get; set; } = FlatColors.Red;
+        public string TextHeader { get; set; } = "Header";//текст
+        public Font FontHeader { get; set; } = new Font("Verdana", 12F, FontStyle.Bold);//свойство шрифта
+         //цвет шрифта
 
         #endregion
         public EgoldsCard()
@@ -39,6 +47,16 @@ namespace Is_1_20_LazarevVA
 
             Rectangle rect = new Rectangle(0, 0, Width - 1, Height - 1);
             Rectangle rectCurtain = new Rectangle(0, 0, Width - 1, (int)CurtainHeight);
+
+            //Фон
+            graph.FillRectangle(new SolidBrush(BackColor), rect);
+
+            //Шторка
+            graph.DrawRectangle(new Pen(BackColorCurtain), rectCurtain);
+            graph.FillRectangle(new SolidBrush(BackColorCurtain), rectCurtain);
+
+            //Обводка
+            graph.DrawRectangle(new Pen(FlatColors.Gray), rect);
 
         }
     }
