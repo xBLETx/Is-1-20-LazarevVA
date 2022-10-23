@@ -35,7 +35,7 @@ namespace Is_1_20_LazarevVA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 243);
+            this.ClientSize = new System.Drawing.Size(349, 318);
             this.Name = "Auth2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
