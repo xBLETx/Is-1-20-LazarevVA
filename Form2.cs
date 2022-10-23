@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace Is_1_20_LazarevVA
 {
-    public partial class Auth2 : MetroForm
+    public partial class Auth2 : Form
     {
         // строка подключения к БД
         //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_18;database=is_1_20_st18_KURS;password=54276237;";
@@ -37,7 +37,7 @@ namespace Is_1_20_LazarevVA
         public void GetUserInfo(string login_user)
         {
             //Объявлем переменную для запроса в БД
-            string selected_id_stud = metroTextBox1.Text;
+                //string selected_id_stud = metroTextBox1.Text;
             // устанавливаем соединение с БД
             conn.Open();
             // запрос
@@ -69,50 +69,6 @@ namespace Is_1_20_LazarevVA
             conn = new MySqlConnection(connStr);
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
-            string sql = "SELECT * FROM Role WHERE Login = @un and  Password= @up";
-            //Открытие соединения
-            conn.Open();
-            //Объявляем таблицу
-            DataTable table = new DataTable();
-            //Объявляем адаптер
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            //Объявляем команду
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            //Определяем параметры
-            command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
-            command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
-            //Присваиваем параметрам значение
-            command.Parameters["@un"].Value = metroTextBox1.Text;
-            command.Parameters["@up"].Value = sha256(metroTextBox2.Text);
-            //Заносим команду в адаптер
-            adapter.SelectCommand = command;
-            //Заполняем таблицу
-            adapter.Fill(table);
-            //Закрываем соединение
-            conn.Close();
-            //Если вернулась больше 0 строк, значит такой пользователь существует
-            if (table.Rows.Count > 0)
-            {
-                //Присваеваем глобальный признак авторизации
-                Auth.auth = true;
-                //Достаем данные пользователя в случае успеха
-                GetUserInfo(metroTextBox1.Text);
-                //Закрываем форму
-                this.Close();
-            }
-            else
-            {
-                //Отобразить сообщение о том, что авторизаия неуспешна
-                MessageBox.Show("Неверные данные авторизации!");
-            }
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }
