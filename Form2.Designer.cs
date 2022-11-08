@@ -253,7 +253,6 @@ namespace Is_1_20_LazarevVA
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
@@ -261,5 +260,6 @@ namespace Is_1_20_LazarevVA
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        public Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
     }
 }
