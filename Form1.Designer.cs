@@ -38,7 +38,6 @@ namespace Is_1_20_LazarevVA
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +54,7 @@ namespace Is_1_20_LazarevVA
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 118);
+            this.metroLabel2.Location = new System.Drawing.Point(23, 129);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(83, 19);
             this.metroLabel2.TabIndex = 1;
@@ -65,7 +64,7 @@ namespace Is_1_20_LazarevVA
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(109, 18);
+            this.metroLabel3.Location = new System.Drawing.Point(23, 80);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(83, 19);
             this.metroLabel3.TabIndex = 2;
@@ -116,15 +115,12 @@ namespace Is_1_20_LazarevVA
             this.pictureBox1.Size = new System.Drawing.Size(83, 79);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            
-           
             // 
             // Auth1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroButton3);
