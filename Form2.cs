@@ -128,5 +128,10 @@ namespace Is_1_20_LazarevVA
         {
              guna2TextBox2.UseSystemPasswordChar = Convert.ToBoolean(guna2ToggleSwitch1);
         }
+
+        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
