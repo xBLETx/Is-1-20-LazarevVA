@@ -94,7 +94,30 @@ namespace Is_1_20_LazarevVA
             }
         }
 
-        
+              private Form activeForm = null;
+        private void OpenForm(Form minForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+
+            }
+             
+            minForm.TopLevel = false;
+            minForm.FormBorderStyle = FormBorderStyle.None;
+            minForm.Dock = DockStyle.Fill;
+            guna2Panel1
+
+
+
+
+        }
+
+
+
     }
+
+        
+    
 }
 

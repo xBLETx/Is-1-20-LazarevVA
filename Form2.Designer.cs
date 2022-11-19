@@ -110,6 +110,7 @@ namespace Is_1_20_LazarevVA
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.Size = new System.Drawing.Size(223, 35);
             this.guna2TextBox2.TabIndex = 4;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // guna2GradientButton1
             // 
@@ -196,6 +197,7 @@ namespace Is_1_20_LazarevVA
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Auth2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sing in";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

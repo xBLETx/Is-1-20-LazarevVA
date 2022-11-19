@@ -39,7 +39,7 @@ namespace Is_1_20_LazarevVA
             //Объявлем переменную для запроса в БД
                 //string selected_id_stud = metroTextBox1.Text;
             // устанавливаем соединение с БД
-            conn.Open();
+            conn.Open(); 
             // запрос
             string sql = $"SELECT id_role,fio_empl,rol,Login,`Password` FROM Role,Employee WHERE Login='{login_user}'";
             // объект для выполнения SQL-запроса
@@ -57,7 +57,21 @@ namespace Is_1_20_LazarevVA
             reader.Close(); // закрываем reader
             // закрываем соединение с БД
             conn.Close();
+
+            
         }
+        public void ShadowPass()
+        {
+
+            if(guna2ToggleSwitch1.Checked) guna2TextBox2.UseSystemPasswordChar = true;
+            else guna2TextBox2.UseSystemPasswordChar = false;
+
+
+
+
+        }
+      
+
         public Auth2()
         {
             InitializeComponent();
@@ -126,10 +140,15 @@ namespace Is_1_20_LazarevVA
 
         public void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
         {
-             guna2TextBox2.UseSystemPasswordChar = Convert.ToBoolean(guna2ToggleSwitch1);
+            ShadowPass();
         }
 
         private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
