@@ -12,10 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace Is_1_20_LazarevVA
 {
-    public partial class Auth2 : MetroForm
+    public partial class Auth2 : Form
     {
         // строка подключения к БД
-        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_18;database=is_1_20_st18_KURS;password=54276237;";
+        //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_18;database=is_1_20_st18_KURS;password=54276237;";
+        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_18;database=is_1_20_st18_KURS;password=54276237;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной форме Вы сможете посмотреть в БД db_test таблице t_user
@@ -36,11 +37,11 @@ namespace Is_1_20_LazarevVA
         public void GetUserInfo(string login_user)
         {
             //Объявлем переменную для запроса в БД
-            string selected_id_stud = metroTextBox1.Text;
+                //string selected_id_stud = metroTextBox1.Text;
             // устанавливаем соединение с БД
-            conn.Open();
+            conn.Open(); 
             // запрос
-            string sql = $"SELECT * FROM Role WHERE Login='{login_user}'";
+            string sql = $"SELECT id_role,fio_empl,rol,Login,`Password` FROM Role,Employee WHERE Login='{login_user}'";
             // объект для выполнения SQL-запроса
             MySqlCommand command = new MySqlCommand(sql, conn);
             // объект для чтения ответа сервера
@@ -56,7 +57,21 @@ namespace Is_1_20_LazarevVA
             reader.Close(); // закрываем reader
             // закрываем соединение с БД
             conn.Close();
+
+            
         }
+        public void ShadowPass()
+        {
+
+            if(guna2ToggleSwitch1.Checked) guna2TextBox2.UseSystemPasswordChar = true;
+            else guna2TextBox2.UseSystemPasswordChar = false;
+
+
+
+
+        }
+      
+
         public Auth2()
         {
             InitializeComponent();
@@ -68,7 +83,16 @@ namespace Is_1_20_LazarevVA
             conn = new MySqlConnection(connStr);
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
             string sql = "SELECT * FROM Role WHERE Login = @un and  Password= @up";
@@ -84,8 +108,8 @@ namespace Is_1_20_LazarevVA
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             //Присваиваем параметрам значение
-            command.Parameters["@un"].Value = metroTextBox1.Text;
-            command.Parameters["@up"].Value = sha256(metroTextBox2.Text);
+            command.Parameters["@un"].Value = guna2TextBox1.Text;
+            command.Parameters["@up"].Value = sha256(guna2TextBox2.Text);
             //Заносим команду в адаптер
             adapter.SelectCommand = command;
             //Заполняем таблицу
@@ -98,7 +122,7 @@ namespace Is_1_20_LazarevVA
                 //Присваеваем глобальный признак авторизации
                 Auth.auth = true;
                 //Достаем данные пользователя в случае успеха
-                GetUserInfo(metroTextBox1.Text);
+                GetUserInfo(guna2TextBox1.Text);
                 //Закрываем форму
                 this.Close();
             }
@@ -109,9 +133,24 @@ namespace Is_1_20_LazarevVA
             }
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Close();
+
+        }
+
+        public void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            ShadowPass();
+        }
+
+        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
