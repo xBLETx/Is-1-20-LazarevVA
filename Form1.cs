@@ -70,7 +70,7 @@ namespace Is_1_20_LazarevVA
             //Вызов формы в режиме диалога
             auth2.ShowDialog();
             //Если авторизации была успешна и в поле класса хранится истина, то делаем движуху:
-            if (Auth.auth)
+            if (AuthF2.Auth.auth)
             {
                 //Отображаем рабочую форму
                 this.Show();
@@ -81,7 +81,7 @@ namespace Is_1_20_LazarevVA
                 //Красим текст в label в зелёный цвет
                 //metroLabel4.ForeColor = Color.Green;
                 //Вызываем метод управления ролями
-                ManagerRole(Auth.auth_role);
+                ManagerRole(AuthF2.Auth.auth_role);
             }
             else
             {
@@ -90,7 +90,7 @@ namespace Is_1_20_LazarevVA
                 //metroLabel3.Text = "Отсутствует информация о пользователе";
                 //metroLabel4.Text = "Тебе сдесь не рады! ";
                 //metroLabel4.ForeColor = Color.Red;
-                ManagerRole(Auth.auth_role);
+                ManagerRole(AuthF2.Auth.auth_role);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Is_1_20_LazarevVA
             minForm.TopLevel = false;
             minForm.FormBorderStyle = FormBorderStyle.None;
             minForm.Dock = DockStyle.Fill;
-            guna2Panel1
+            //guna2Panel
 
 
 
