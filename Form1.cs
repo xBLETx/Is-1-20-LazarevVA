@@ -21,6 +21,23 @@ namespace Is_1_20_LazarevVA
         }
         //Метод расстановки функционала формы взависимости от роли пользователя, которая передается посредством  поля класса,
         //в которое данное значени в свою очередь попало из запроса
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+                
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            guna2Panel1.Controls.Add(childForm);
+            guna2Panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         public void ManagerRole(int role)
         {
             switch (role)
@@ -94,24 +111,16 @@ namespace Is_1_20_LazarevVA
             }
         }
 
-              private Form activeForm = null;
-        private void OpenForm(Form minForm)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-
-            }
-             
-            minForm.TopLevel = false;
-            minForm.FormBorderStyle = FormBorderStyle.None;
-            minForm.Dock = DockStyle.Fill;
-            //guna2Panel
-
-
-
-
+            openChildForm(new Emploe());
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new data());
+        }
+    }
 
 
 
@@ -119,5 +128,5 @@ namespace Is_1_20_LazarevVA
 
         
     
-}
+
 
